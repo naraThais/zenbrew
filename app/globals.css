@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  body {
-    @apply font-secondary text-secondary leading-relaxed;
-  }
-  h1, h2, h2, h3, h4, h5, h6 {
-    @apply text-primary font-primary;
-  }
+  @layer base {
+    body {
+      @apply font-secondary text-secondary leading-relaxed;
+    }
+  
+    h1, h2, h3, h4, h5, h6 {
+      @apply font-primary text-primary;
+    }
   .h1 {
     @apply text-[700px] xl:text-[150px] leading-[1.1] font-semibold;
   }
