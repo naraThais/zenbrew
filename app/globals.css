@@ -8,10 +8,10 @@
     }
   
     h1, h2, h3, h4, h5, h6 {
-      @apply font-primary text-primary;
+      @apply text-primary font-primary;
     }
   .h1 {
-    @apply text-[700px] xl:text-[150px] leading-[1.1] font-semibold;
+    @apply text-[70px] xl:text-[150px] leading-[1.1] font-semibold;
   }
   .h2 {
     @apply text-[56px] xl:text-[80px] leading-[1.2] font-bold;
