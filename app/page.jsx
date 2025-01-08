@@ -7,12 +7,18 @@ const Home = () => {
   useEffect(() => {
     const loadLocomotiveScroll = async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      new LocomotiveScroll();
+      const scrollContainer = document.querySelector("[data-scroll-container]");
+      if (scrollContainer) {
+        new LocomotiveScroll({
+          el: scrollContainer,
+          smooth: true,
+        });
+      }
     };
     loadLocomotiveScroll();
   }, []);
   return (
-    <div className="h-full overflow-x-hidden">
+    <div className="h-full overflow-x-hidden" data-scroll-container>
       <Hero />
       {/* temporary div */}
       <div className="h-[4000px]"></div>

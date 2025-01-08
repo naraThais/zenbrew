@@ -25,9 +25,8 @@ const Hero = () => {
         {/* texto */}
         <div
           data-scroll
-          data-scroll-spreed="0.4"
-          className="flex-1 flex flex-col text-center justify-center 
-          items-center xl:pb-12 gap-10 h-full"
+          data-scroll-speed="0.4"
+          className="flex-1  flex flex-col text-center justify-center items-center xl:pb-12 gap-10 h-full"
         >
           {/* badge & h1 */}
           <div className="flex flex-col items-center">
