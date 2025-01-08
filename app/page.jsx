@@ -1,9 +1,23 @@
 "use client";
 import Hero from "@/components/Hero";
-const Home = () => {
-  return (
-    <div className="h-full overflow-x-hidden"><Hero/></div>
-  )
-}
+import { useEffect } from "react";
 
-export default Home
+const Home = () => {
+  // add locomotive scroll
+  useEffect(() => {
+    const loadLocomotiveScroll = async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      new LocomotiveScroll();
+    };
+    loadLocomotiveScroll();
+  }, []);
+  return (
+    <div className="h-full overflow-x-hidden">
+      <Hero />
+      {/* temporary div */}
+      <div className="h-[4000px]"></div>
+    </div>
+  );
+};
+
+export default Home;
