@@ -1,10 +1,11 @@
 import { Cormorant_Upright, Open_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const cormorant_upright = Cormorant_Upright({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-cormorant_upright"
+  variable: "--font-cormorant_upright",
 });
 
 const open_sans = Open_Sans({
@@ -21,9 +22,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${cormorant_upright.variable} ${open_sans.variable}`}
-      >
+      <body className={`${cormorant_upright.variable} ${open_sans.variable}`}>
+        <Header />
         {children}
       </body>
     </html>
